@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excel 實戰教學 — 課程介紹</title>
+<style>
+  :root {
+    --brown: #8B5E3C;
+    --brown-dark: #6B4226;
+    --orange: #D4A574;
+    --orange-light: #F5E6D3;
+    --cream: #FFF8F0;
+    --milk: #FAF0E6;
+    --warm-gray: #7A6B5D;
+    --text: #3D2B1F;
+    --white: #FFFFFF;
+    --border: #E8D5C4;
+    --green-bg: #F2F8F0;
+    --green-soft: #A8C5A0;
+    --red-bg: #FDF2F2;
+    --red-soft: #D4A0A0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+    background: var(--milk);
+    color: var(--text);
+    line-height: 1.85;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 16px 40px; }
+
+  /* HERO */
+  .hero {
+    background: var(--orange);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 36px 28px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .hero h1 { font-size: 26px; margin-bottom: 6px; }
+  .hero p { font-size: 15px; opacity: .9; }
+  .hero .tags { margin-top: 12px; }
+  .hero .tag {
+    display: inline-block;
+    background: rgba(255,255,255,.22);
+    padding: 3px 14px; border-radius: 14px;
+    font-size: 12px; margin: 3px 2px;
+  }
+
+  /* CARD */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  .card h2 {
+    font-size: 17px; color: var(--brown);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--orange-light);
+  }
+  .card p { margin: 6px 0; font-size: 15px; }
+
+  /* YES / NO */
+  .yn { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .yn-yes, .yn-no { padding: 16px; border-radius: 8px; font-size: 14px; }
+  .yn-yes { background: var(--green-bg); border: 1px solid var(--green-soft); }
+  .yn-no { background: var(--red-bg); border: 1px solid var(--red-soft); }
+  .yn-yes strong { color: #5B8A5B; }
+  .yn-no strong { color: #9B5555; }
+  .yn ul { padding-left: 18px; margin-top: 6px; }
+  .yn li { margin: 3px 0; }
+
+  /* OUTLINE */
+  .oi {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 0; border-bottom: 1px solid var(--orange-light);
+  }
+  .oi:last-child { border-bottom: none; }
+  .oi-n {
+    background: var(--orange); color: var(--white);
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 700; flex-shrink: 0;
+  }
+  .oi-c { flex: 1; }
+  .oi-c strong { color: var(--brown-dark); font-size: 15px; }
+  .oi-c span { display: block; color: var(--warm-gray); font-size: 13px; }
+  .oi-t { color: var(--warm-gray); font-size: 12px; white-space: nowrap; }
+
+  /* HIGHLIGHT */
+  .hl-box {
+    background: var(--cream);
+    border-left: 3px solid var(--orange);
+    padding: 14px 16px;
+    margin: 12px 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 14px;
+  }
+
+  /* NOTE */
+  .note {
+    color: var(--warm-gray);
+    font-size: 13px;
+    padding: 8px 0 8px 14px;
+    border-left: 2px solid var(--border);
+    margin: 10px 0;
+  }
+
+  /* TABLE */
+  .tbl { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
+  .tbl th { background: var(--orange); color: var(--white); padding: 8px 12px; text-align: left; }
+  .tbl td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  .tbl tr:nth-child(even) td { background: var(--cream); }
+
+  /* FOOTER */
+  .footer {
+    text-align: center; padding: 20px 0 0;
+    color: var(--warm-gray); font-size: 12px;
+    border-top: 1px solid var(--orange-light);
+    margin-top: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .yn { grid-template-columns: 1fr; }
+    .hero { padding: 24px 18px; }
+    .hero h1 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Excel 實戰教學</h1>
+    <p>餐飲業應用 — 2 小時學會職場必備技能</p>
+    <div class="tags">
+      <span class="tag">2 小時</span>
+      <span class="tag">實際操作</span>
+      <span class="tag">不用背公式</span>
+      <span class="tag">帶練習檔回去</span>
+    </div>
+  </div>
+
+  <!-- 這堂課在幹嘛 -->
+  <div class="card">
+    <h2>這堂課在做什麼？</h2>
+    <p>用我們公司的訂單情境，帶你從零學會 Excel 常用公式和資料整理技巧。</p>
+    <p>全程都是<strong>實際動手操作</strong>，不是坐著聽講。每學一個功能就馬上練習，最後還會出題讓你自己挑戰。</p>
+    <div class="hl-box">
+      重點不是背公式，而是學會「遇到問題時知道怎麼找到解法」。
+    </div>
+  </div>
+
+  <!-- 適合 / 不適合 -->
+  <div class="card">
+    <h2>適合誰來上？</h2>
+    <div class="yn">
+      <div class="yn-yes">
+        <strong>適合你</strong>
+        <ul>
+          <li>平常有在用 Excel 但只會基本操作</li>
+          <li>知道 SUM 但不知道 SUMIF 是什麼</li>
+          <li>常常手動一筆一筆算，想學更快的方法</li>
+          <li>聽過樞紐分析但不會用</li>
+          <li>想學會自己查公式、不用每次問人</li>
+        </ul>
+      </div>
+      <div class="yn-no">
+        <strong>這堂課不會教</strong>
+        <ul>
+          <li>VBA / 巨集程式撰寫</li>
+          <li>Power Query / Power BI</li>
+          <li>Excel 從零開始（需要會基本輸入和存檔）</li>
+          <li>進階圖表設計</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 課程大綱 -->
+  <div class="card">
+    <h2>課程大綱</h2>
+    <div class="oi">
+      <span class="oi-n">1</span>
+      <div class="oi-c"><strong>暖身題</strong><span>先做一份簡單練習，確認大家的程度在哪裡</span></div>
+      <span class="oi-t">10 分鐘</span>
+    </div>
+    <div class="oi">
+      <span class="oi-n">2</span>
+      <div class="oi-c"><strong>核心公式</strong><span>IF / SUMIF / SUMIFS / AVERAGEIF / VLOOKUP / XLOOKUP / 格式化條件</span></div>
+      <span class="oi-t">35 分鐘</span>
+    </div>
+    <div class="oi">
+      <span class="oi-n">3</span>
+      <div class="oi-c"><strong>放手題</strong><span>只告訴你需求，不提示用什麼公式，自己判斷</span></div>
+      <span class="oi-t">10 分鐘</span>
+    </div>
+    <div class="oi">
+      <span class="oi-n">4</span>
+      <div class="oi-c"><strong>樞紐分析 + 切片器</strong><span>用拖拉完成報表，10 秒做到公式要花 10 分鐘的事</span></div>
+      <span class="oi-t">30 分鐘</span>
+    </div>
+    <div class="oi">
+      <span class="oi-n">5</span>
+      <div class="oi-c"><strong>綜合挑戰</strong><span>兩題不同難度，把今天學的全部用上</span></div>
+      <span class="oi-t">25 分鐘</span>
+    </div>
+    <div class="oi">
+      <span class="oi-n">6</span>
+      <div class="oi-c"><strong>用 AI 找公式</strong><span>公式忘了怎麼辦？學會問 AI 幫你寫</span></div>
+      <span class="oi-t">10 分鐘</span>
+    </div>
+  </div>
+
+  <!-- 上課前需要準備什麼 -->
+  <div class="card">
+    <h2>上課前要準備什麼？</h2>
+    <table class="tbl">
+      <tr><th>項目</th><th>說明</th></tr>
+      <tr><td>電腦</td><td>自備筆電，需安裝 Excel（建議 2016 以上版本，最好 365）</td></tr>
+      <tr><td>軟體版本</td><td>XLOOKUP 功能需要 Excel 365 或 2021 以上，舊版也能上課（會用 VLOOKUP 替代）</td></tr>
+      <tr><td>基本能力</td><td>會開啟 Excel、會在儲存格打字和存檔就好</td></tr>
+    </table>
+    <div class="note">不需要事先準備任何資料，練習檔案上課時會統一提供。</div>
+  </div>
+
+  <!-- 上完課你會帶走什麼 -->
+  <div class="card">
+    <h2>上完課你會帶走什麼？</h2>
+    <table class="tbl">
+      <tr><th>項目</th><th>內容</th></tr>
+      <tr><td>練習檔案</td><td>5 份 Excel 練習檔（含參考答案），回家可以重複練</td></tr>
+      <tr><td>錯誤速查</td><td>常見公式錯誤和修正方法整理</td></tr>
+      <tr><td>課後講義</td><td>公式速查表 + 樞紐分析重點 + AI 問公式技巧</td></tr>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © 2026 咪 All Rights Reserved.
+  </div>
+
+</div>
+</body>
+</html>
